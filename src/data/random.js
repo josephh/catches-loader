@@ -24,15 +24,10 @@ var randomDate = (start, end) => {
 }
 
 var randomImg = () => {
-  let fileName
-  console.log('what is cwd? ' + process.cwd.toString)
-  fs.readdir(process.cwd  + '/img', (err, files) => {
-    if (err) {
-      console.log(`Errors fetching files from img. Details ${err}` )
-      return
-    }
-    console.log(randomSelection(files))
-  })
+  // let fileName, files =  fs.readdirSync(process.cwd + '/Users/joe/fyb/server/catch_loader/src/data/img')
+  let fileName, path = `${process.cwd()}/src/data/img/`, files =  fs.readdirSync(`${path}`)
+  files = files.map((file) => `${path}${file}`)
+  return randomSelection(files)()
 }
 
 // exports is shorthand for module.exports

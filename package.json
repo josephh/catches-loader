@@ -1,0 +1,20 @@
+{
+  "name": "catch_loader",
+  "version": "1.0.0",
+  "description": "Create some catch POST requests and send those to the catches microservice (for loading)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node src/launcher.js"
+  },
+  "keywords": [
+    "fyb",
+    "catches",
+    "loader"
+  ],
+  "author": "josephh",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
